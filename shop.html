@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collection | BRAND</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/global.css">
+</head>
+<body>
+    <div class="top-bar">
+        Free shipping on all orders over ₹2000
+    </div>
+
+    <header class="navbar">
+        <div class="logo">
+            <a href="index.html" style="text-decoration: none; color: inherit;">BRAND</a>
+        </div>
+        
+        <nav class="nav-links">
+            <a href="shop.html?gender=women">Women</a>
+            <a href="shop.html?gender=men">Men</a>
+            <a href="collections.html">New Arrivals</a>
+        </nav>
+
+        <div class="nav-icons">
+            <a href="#" id="search-icon">Search</a>
+            <a href="#" id="cart-icon">Cart (0)</a>
+        </div>
+    </header>
+
+    <main class="container">
+        <h1 id="shop-title" style="text-align: center; margin-bottom: 30px;">Collection</h1>
+        
+       
+        
+        <div class="product-grid" id="shop-grid"></div>
+    </main>
+
+  <div class="search-overlay" id="search-overlay">
+        
+        <div class="search-header">
+            <button id="toggle-filters-btn" class="toggle-filters">FILTERS</button>
+            <input type="text" id="search-input" placeholder="Search for silhouettes, fabrics..." autocomplete="off">
+            <div class="search-close" id="close-search">✕</div>
+        </div>
+        
+        <div class="search-layout">
+            <aside class="search-sidebar" id="search-sidebar">
+                <div class="search-sidebar-inner">
+                    <div class="sidebar-section-label">Refine By</div>
+                    
+                    <div class="filter-group">
+                        <label>Sort By</label>
+                        <div class="custom-select" id="sort-select" data-value="relevance">
+                            <div class="custom-select-trigger">Relevance</div>
+                            <div class="custom-options">
+                                <span class="custom-option selected" data-value="relevance">Relevance</span>
+                                <span class="custom-option" data-value="price-low">Price: Low to High</span>
+                                <span class="custom-option" data-value="price-high">Price: High to Low</span>
+                                <span class="custom-option" data-value="name-a-z">Name: A - Z</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="filter-group">
+                        <label>Category</label>
+                        <div class="custom-select" id="filter-gender" data-value="all">
+                            <div class="custom-select-trigger">All</div>
+                            <div class="custom-options">
+                                <span class="custom-option selected" data-value="all">All</span>
+                                <span class="custom-option" data-value="women">Women</span>
+                                <span class="custom-option" data-value="men">Men</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="filter-group">
+                        <label>Price Range: ₹<span id="price-min-display">0</span> - ₹<span id="price-max-display">10000</span></label>
+                        <div class="range-container">
+                            <div class="slider-track"></div>
+                            <div class="slider-track-fill" id="slider-track-fill"></div>
+                            <input type="range" id="price-min" min="0" max="10000" step="500" value="0">
+                            <input type="range" id="price-max" min="0" max="10000" step="500" value="10000">
+                        </div>
+                    </div>
+                </div>
+            </aside>
+
+            <div class="search-main">
+                <div class="search-results product-grid" id="search-results"></div>
+            </div>
+        </div>
+    </div>
+    <div class="cart-overlay" id="cart-overlay"></div>
+    <div class="cart-drawer" id="cart-drawer">
+        <div class="cart-header">
+            <h2>Your Cart</h2>
+            <button class="cart-close" id="close-cart">✕</button>
+        </div>
+        <div class="cart-items" id="cart-items-container">
+            </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Subtotal</span>
+                <span id="cart-total-price">₹0</span>
+            </div>
+            <p class="shipping-note">Shipping & taxes calculated at checkout.</p>
+            <button class="btn-primary" id="checkout-btn" style="width: 100%;">Proceed to Checkout</button>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-links">
+            <a href="about.html">About BRAND</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="shipping.html">Shipping & Returns</a>
+        </div>
+        <p>&copy; 2026 BRAND. All rights reserved.</p>
+    </footer>
+
+    <script type="module" src="js/app.js"></script>
+</body>
+</html>
